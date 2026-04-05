@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a; /* Dark background for a cinema feel */
+            color: #e0e0e0; /* Light text for contrast */
+            margin: 0;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: #2c2c2c; /* Darker header */
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #b0b0b0; /* Lighter navigation links */
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+            color: #ffcc00; /* Accent color for icons */
+        }
+
+        nav ul li a:hover {
+            background-color: #444; /* Darker hover background */
+            color: #ffffff; /* White text on hover */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #ffcc00; /* Gold color for the main title */
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+        }
+
+        /* Movie Booth Specific Styles */
+        .movie-booth-container {
+            max-width: 960px;
+            margin: 2rem auto;
+            background-color: #2c2c2c; /* Dark card background */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            border: 1px solid #444; /* Subtle border */
+        }
+
+        .movie-description {
+            font-style: italic;
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .movie-schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .movie-schedule-table th,
+        .movie-schedule-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #444; /* Darker separator */
+        }
+
+        .movie-schedule-table th {
+            background-color: #ffcc00; /* Gold header */
+            color: #1a1a1a; /* Dark text for header */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .movie-schedule-table tr:nth-child(even) {
+            background-color: #3a3a3a; /* Slightly lighter dark for even rows */
+        }
+
+        .movie-schedule-table tr:hover {
+            background-color: #4a4a4a; /* Hover effect */
+        }
+
+        .ticket-price {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ffcc00; /* Gold for ticket price */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .movie-booth-container {
+                padding: 1.5rem;
+            }
+            .movie-schedule-table th,
+            .movie-schedule-table td {
+                font-size: 0.9rem;
+                padding: 0.6rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../booth.html"><i class="fas fa-reply-all"></i>Back</a></li>
+                <li><a href="booth3.html"><i class="fas fa-backward"></i>Previous</a></li>
+                <li><a href="booth2.html"><i class="fas fa-forward"></i>Next</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="movie-booth-container">
+        <h1>Movie Booth</h1>
+        <p class="movie-description">
+            Welcome to our student movie booth! Experience cinematic magic with our curated selection of films, all at an affordable price for students.
+        </p>
+
+        <table class="movie-schedule-table">
+            <thead>
+                <tr>
+                    <th>Movie Title</th>
+                    <th>Schedule</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Great Adventure</td>
+                    <td>10:00 AM | 2:00 PM | 6:00 PM</td>
+                    <td>A thrilling journey of discovery through uncharted lands, filled with action and breathtaking landscapes.</td>
+                </tr>
+                <tr>
+                    <td>Cosmic Odyssey</td>
+                    <td>11:30 AM | 3:30 PM | 7:30 PM</td>
+                    <td>Embark on an interstellar voyage to explore the mysteries of the universe and encounter alien civilizations.</td>
+                </tr>
+                <tr>
+                    <td>Mystery on Elm Street</td>
+                    <td>1:00 PM | 5:00 PM | 9:00 PM</td>
+                    <td>A suspenseful whodunit where a clever detective must unravel a complex plot before time runs out.</td>
+                </tr>
+                <tr>
+                    <td>Romantic Echoes</td>
+                    <td>12:00 PM | 4:00 PM | 8:00 PM</td>
+                    <td>A heartwarming tale of love found and lost, exploring the enduring power of connection and second chances.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="ticket-price">
+            Student Ticket Price: $5.00 (All Movies)
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Booth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Soft, neutral background */
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+            color: #007bff; /* Accent color for icons */
+        }
+
+        nav ul li a:hover {
+            background-color: #e0e7ef;
+            color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #0056b3; /* Primary brand color for title */
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Clothing Booth Specific Styles */
+        .booth-container {
+            max-width: 960px;
+            margin: 2rem auto;
+            background-color: #fff; /* White background for the booth card */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e7ef; /* Light border */
+        }
+
+        .booth-description {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e0e7ef;
+            padding-bottom: 0.5rem;
+        }
+
+        .price-table, .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .price-table th,
+        .price-table td,
+        .schedule-table th,
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e7ef; /* Light border */
+        }
+
+        .price-table th,
+        .schedule-table th {
+            background-color: #e0e7ef; /* Light blue header */
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-table tr:nth-child(even),
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light gray for even rows */
+        }
+
+        .price-table tr:hover,
+        .schedule-table tr:hover {
+            background-color: #e8f0f7; /* Lighter blue hover */
+        }
+
+        .price {
+            font-weight: bold;
+            color: #007bff; /* Primary brand color for prices */
+        }
+
+        .brand-highlight {
+            font-weight: bold;
+            color: #0056b3; /* Darker brand color for brand names */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .booth-container {
+                padding: 1.5rem;
+            }
+            .price-table th,
+            .price-table td,
+            .schedule-table th,
+            .schedule-table td {
+                font-size: 0.9rem;
+                padding: 0.6rem 0.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../booth.html"><i class="fas fa-reply-all"></i>Back</a></li>
+                <li><a href="booth2.html"><i class="fas fa-backward"></i>Previous</a></li>
+                <li><a href="booth4.html"><i class="fas fa-forward"></i>Next</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booth-container">
+        <h1>Clothing Booth</h1>
+        <p class="booth-description">
+            Discover stylish apparel for students! Find quality clothing from popular Filipino brands and casual wear at student-friendly prices.
+        </p>
+
+        <h2 class="section-title">Brand & Size Pricing (PHP)</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Item Type</th>
+                    <th>Size</th>
+                    <th>Price (PHP)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="brand-highlight">Penshoppe</td>
+                    <td>T-Shirt</td>
+                    <td>Small</td>
+                    <td class="price">450.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Penshoppe</td>
+                    <td>T-Shirt</td>
+                    <td>Medium</td>
+                    <td class="price">480.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Penshoppe</td>
+                    <td>T-Shirt</td>
+                    <td>Large</td>
+                    <td class="price">500.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Penshoppe</td>
+                    <td>Polo Shirt</td>
+                    <td>Small</td>
+                    <td class="price">650.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Penshoppe</td>
+                    <td>Polo Shirt</td>
+                    <td>Medium</td>
+                    <td class="price">680.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Penshoppe</td>
+                    <td>Polo Shirt</td>
+                    <td>Large</td>
+                    <td class="price">700.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Bench</td>
+                    <td>T-Shirt</td>
+                    <td>Small</td>
+                    <td class="price">499.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Bench</td>
+                    <td>T-Shirt</td>
+                    <td>Medium</td>
+                    <td class="price">520.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Bench</td>
+                    <td>T-Shirt</td>
+                    <td>Large</td>
+                    <td class="price">550.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Bench</td>
+                    <td>Polo Shirt</td>
+                    <td>Small</td>
+                    <td class="price">750.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Bench</td>
+                    <td>Polo Shirt</td>
+                    <td>Medium</td>
+                    <td class="price">780.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Bench</td>
+                    <td>Polo Shirt</td>
+                    <td>Large</td>
+                    <td class="price">799.00</td>
+                </tr>
+                <!-- Casual Shirts (No Brand) -->
+                <tr>
+                    <td class="brand-highlight">Casual Wear</td>
+                    <td>T-Shirt</td>
+                    <td>Small</td>
+                    <td class="price">350.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Casual Wear</td>
+                    <td>T-Shirt</td>
+                    <td>Medium</td>
+                    <td class="price">350.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Casual Wear</td>
+                    <td>T-Shirt</td>
+                    <td>Large</td>
+                    <td class="price">350.00</td>
+                </tr>
+                 <!-- Added another brand -->
+                <tr>
+                    <td class="brand-highlight">Reflect Apparel</td>
+                    <td>T-Shirt</td>
+                    <td>Small</td>
+                    <td class="price">400.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Reflect Apparel</td>
+                    <td>T-Shirt</td>
+                    <td>Medium</td>
+                    <td class="price">420.00</td>
+                </tr>
+                <tr>
+                    <td class="brand-highlight">Reflect Apparel</td>
+                    <td>T-Shirt</td>
+                    <td>Large</td>
+                    <td class="price">450.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Special Event Schedules</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valentine's Day Sale</td>
+                    <td>February 14</td>
+                    <td>9:00 AM - 4:00 PM (Special Discounts!)</td>
+                </tr>
+                <tr>
+                    <td>University Days Promo</td>
+                    <td>March 10-12</td>
+                    <td>10:00 AM - 5:00 PM (Bundle Deals Available!)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

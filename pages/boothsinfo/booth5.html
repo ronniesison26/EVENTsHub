@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogurt Booth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8f5e9; /* Light green, fresh background */
+            margin: 0;
+            color: #388e3c; /* Dark green text for a natural feel */
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #388e3c; /* Dark green links */
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+            color: #4caf50; /* Brighter green for icons */
+        }
+
+        nav ul li a:hover {
+            background-color: #c8e6c9; /* Lighter green hover */
+            color: #2e7d32; /* Darker green on hover */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2e7d32; /* Deep green for the title */
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Yogurt Booth Specific Styles */
+        .booth-container {
+            max-width: 960px;
+            margin: 2rem auto;
+            background-color: #ffffff; /* White background for the booth card */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #a5d6a7; /* Light green border */
+        }
+
+        .booth-description {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #388e3c; /* Dark green for description */
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2e7d32; /* Deep green */
+            text-align: center;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #81c784; /* Medium green accent border */
+            padding-bottom: 0.5rem;
+        }
+
+        .price-table, .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .price-table th,
+        .price-table td,
+        .schedule-table th,
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #c8e6c9; /* Light green border */
+        }
+
+        .price-table th,
+        .schedule-table th {
+            background-color: #4caf50; /* Green headers */
+            color: #ffffff; /* White text for headers */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-table tr:nth-child(even),
+        .schedule-table tr:nth-child(even) {
+            background-color: #f1f8e9; /* Very light green for even rows */
+        }
+
+        .price-table tr:hover,
+        .schedule-table tr:hover {
+            background-color: #e8f5e9; /* Lighter green hover */
+        }
+
+        .price {
+            font-weight: bold;
+            color: #388e3c; /* Dark green for prices */
+        }
+
+        .event-highlight {
+            font-style: italic;
+            color: #d32f2f; /* Red accent for event details */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .booth-container {
+                padding: 1.5rem;
+            }
+            .price-table th,
+            .price-table td,
+            .schedule-table th,
+            .schedule-table td {
+                font-size: 0.9rem;
+                padding: 0.6rem 0.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../booth.html"><i class="fas fa-reply-all"></i>Back</a></li>
+                <li><a href="booth4.html"><i class="fas fa-backward"></i>Previous</a></li>
+                <li><a href="booth6.html"><i class="fas fa-forward"></i>Next</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booth-container">
+        <h1>Yogurt Booth</h1>
+        <p class="booth-description">
+            Refreshing and healthy yogurt options! Perfect for a cool treat any time of the day.
+        </p>
+
+        <h2 class="section-title">Our Yogurt Menu & Prices</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Yogurt Type</th>
+                    <th>Size</th>
+                    <th>Price (PHP)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Classic Plain Yogurt</td>
+                    <td>Small (150ml)</td>
+                    <td class="price">60.00</td>
+                </tr>
+                <tr>
+                    <td>Classic Plain Yogurt</td>
+                    <td>Medium (250ml)</td>
+                    <td class="price">90.00</td>
+                </tr>
+                <tr>
+                    <td>Classic Plain Yogurt</td>
+                    <td>Large (350ml)</td>
+                    <td class="price">120.00</td>
+                </tr>
+                <tr>
+                    <td>Strawberry Swirl</td>
+                    <td>Small (150ml)</td>
+                    <td class="price">70.00</td>
+                </tr>
+                <tr>
+                    <td>Strawberry Swirl</td>
+                    <td>Medium (250ml)</td>
+                    <td class="price">100.00</td>
+                </tr>
+                <tr>
+                    <td>Strawberry Swirl</td>
+                    <td>Large (350ml)</td>
+                    <td class="price">130.00</td>
+                </tr>
+                <tr>
+                    <td>Mango Tango</td>
+                    <td>Small (150ml)</td>
+                    <td class="price">70.00</td>
+                </tr>
+                <tr>
+                    <td>Mango Tango</td>
+                    <td>Medium (250ml)</td>
+                    <td class="price">100.00</td>
+                </tr>
+                <tr>
+                    <td>Mango Tango</td>
+                    <td>Large (350ml)</td>
+                    <td class="price">130.00</td>
+                </tr>
+                <tr>
+                    <td>Blueberry Bliss</td>
+                    <td>Small (150ml)</td>
+                    <td class="price">70.00</td>
+                </tr>
+                <tr>
+                    <td>Blueberry Bliss</td>
+                    <td>Medium (250ml)</td>
+                    <td class="price">100.00</td>
+                </tr>
+                <tr>
+                    <td>Blueberry Bliss</td>
+                    <td>Large (350ml)</td>
+                    <td class="price">130.00</td>
+                </tr>
+                <tr>
+                    <td>Yogurt Parfait (Granola & Fruit)</td>
+                    <td>Regular</td>
+                    <td class="price">150.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Special Event Schedules & Offers</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Special Offer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Teachers' Day Special</td>
+                    <td>October 5</td>
+                    <td class="event-highlight">All Teachers get 15% OFF any yogurt purchase!</td>
+                </tr>
+                <tr>
+                    <td>Intramurals Kick-off</td>
+                    <td>November 10-12</td>
+                    <td class="event-highlight">Buy 2 Large yogurts, get 1 Small Plain FREE!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

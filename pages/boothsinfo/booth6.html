@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pins & Keychains</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fce4ec; /* Soft pink background, like a craft supply */
+            margin: 0;
+            color: #880e4f; /* Deep pink/purple text */
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #880e4f; /* Deep pink/purple links */
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+            color: #d81b60; /* Brighter pink for icons */
+        }
+
+        nav ul li a:hover {
+            background-color: #f8bbd0; /* Lighter pink hover */
+            color: #4a148c; /* Darker purple on hover */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #ad1457; /* Richer pink for the title */
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pins & Keychains Booth Specific Styles */
+        .booth-container {
+            max-width: 960px;
+            margin: 2rem auto;
+            background-color: #fff; /* White background for the booth card */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f48fb1; /* Light pink border */
+        }
+
+        .booth-description {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #880e4f; /* Deep pink/purple for description */
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #ad1457; /* Rich pink */
+            text-align: center;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f48fb1; /* Medium pink accent border */
+            padding-bottom: 0.5rem;
+        }
+
+        .price-table, .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .price-table th,
+        .price-table td,
+        .schedule-table th,
+        .schedule-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f8bbd0; /* Light pink border */
+        }
+
+        .price-table th,
+        .schedule-table th {
+            background-color: #d81b60; /* Pink headers */
+            color: #ffffff; /* White text for headers */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-table tr:nth-child(even),
+        .schedule-table tr:nth-child(even) {
+            background-color: #fce4ec; /* Very light pink for even rows */
+        }
+
+        .price-table tr:hover,
+        .schedule-table tr:hover {
+            background-color: #f8bbd0; /* Lighter pink hover */
+        }
+
+        .price {
+            font-weight: bold;
+            color: #880e4f; /* Deep pink/purple for prices */
+        }
+
+        .event-highlight {
+            font-style: italic;
+            color: #4a148c; /* Dark purple accent for event details */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .booth-container {
+                padding: 1.5rem;
+            }
+            .price-table th,
+            .price-table td,
+            .schedule-table th,
+            .schedule-table td {
+                font-size: 0.9rem;
+                padding: 0.6rem 0.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../booth.html"><i class="fas fa-reply-all"></i>Back</a></li>
+                <li><a href="booth5.html"><i class="fas fa-backward"></i>Previous</a></li>
+                <li><a href="booth7.html"><i class="fas fa-forward"></i>Next</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booth-container">
+        <h1>Custom Pins & Keychains</h1>
+        <p class="booth-description">
+            Design your unique pins and keychains! Choose your style, add your own flair, and create something special.
+        </p>
+
+        <h2 class="section-title">Customization Options & Pricing</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Item Type</th>
+                    <th>Material / Style</th>
+                    <th>Customization Options</th>
+                    <th>Price (PHP)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Enamel Pin</td>
+                    <td>Hard Enamel</td>
+                    <td>Custom Design (Up to 4 colors)</td>
+                    <td class="price">150.00</td>
+                </tr>
+                <tr>
+                    <td>Enamel Pin</td>
+                    <td>Soft Enamel</td>
+                    <td>Custom Design (Up to 4 colors)</td>
+                    <td class="price">130.00</td>
+                </tr>
+                <tr>
+                    <td>Enamel Pin</td>
+                    <td>Glitter Enamel</td>
+                    <td>Custom Design (Up to 4 colors)</td>
+                    <td class="price">170.00</td>
+                </tr>
+                <tr>
+                    <td>Keychain</td>
+                    <td>Acrylic</td>
+                    <td>Double-sided Print</td>
+                    <td class="price">100.00</td>
+                </tr>
+                <tr>
+                    <td>Keychain</td>
+                    <td>Metal (Zinc Alloy)</td>
+                    <td>Engraved Design</td>
+                    <td class="price">180.00</td>
+                </tr>
+                <tr>
+                    <td>Keychain</td>
+                    <td>PVC</td>
+                    <td>Full Color Print</td>
+                    <td class="price">90.00</td>
+                </tr>
+                <tr>
+                    <td>Sticker Sheet</td>
+                    <td>Vinyl</td>
+                    <td>Custom Designs (Set of 5 stickers)</td>
+                    <td class="price">120.00</td>
+                </tr>
+                 <tr>
+                    <td>Custom Design Fee</td>
+                    <td>Digital Art</td>
+                    <td>Complex Design / Artwork</td>
+                    <td class="price">200.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Special Event Schedules & Offers</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Special Offer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Teachers' Day Special</td>
+                    <td>October 5</td>
+                    <td class="event-highlight">Get 10% OFF your custom order + a FREE sticker!</td>
+                </tr>
+                <tr>
+                    <td>Intramurals Kick-off</td>
+                    <td>November 10-12</td>
+                    <td class="event-highlight">Order 3+ custom items and get a FREE keychain upgrade!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

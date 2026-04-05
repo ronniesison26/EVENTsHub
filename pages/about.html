@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - University Event Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+            background-image: url(2background.avif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            background-color: #e0e7ef;
+            color: #0056b3;
+        }
+
+        /* --- NEW STYLES FOR ABOUT PAGE --- */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0056b3, #007bff);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .content-card h2 {
+            color: #0056b3;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+        }
+
+        .vision-mission {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .vm-box {
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid #0056b3;
+            background-color: #f8f9fa;
+        }
+
+        .vm-box h3 {
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Developers Section */
+        .developers-section {
+            margin-top: 2rem;
+        }
+
+        .developers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .dev-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dev-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dev-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #e0e7ef;
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid #0056b3;
+        }
+
+        .dev-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dev-card h4 {
+            color: #0056b3;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .dev-card p {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-info-circle"></i> About University Event Hub</h1>
+            <p>Your one-stop platform for all university activities and happenings</p>
+        </div>
+
+        <div class="content-card">
+            <h2><i class="fas fa-book-open"></i> About the Website</h2>
+            <p><strong>University Event Hub</strong> is a centralized platform designed to
+                 keep students, faculty, and staff updated with all the upcoming events, 
+                 activities, and schedules within the university. 
+                 We display all schedules in one place. We also showcase the different food and game booths available during these events, making it easier for everyone to plan and enjoy.</p>
+        </div>
+
+        <div class="vision-mission">
+            <div class="vm-box">
+                <h3><i class="fas fa-eye"></i> Vision</h3>
+                <p>To be the leading digital platform that connects the university community through efficient information dissemination, fostering engagement, and making every event accessible and enjoyable for everyone.</p>
+            </div>
+            <div class="vm-box">
+                <h3><i class="fas fa-bullseye"></i> Mission</h3>
+                <p>To provide accurate, real-time updates on university events and booth locations, ensuring that no student or staff misses out on the excitement and opportunities within the campus.</p>
+            </div>
+        </div>
+
+        <div class="content-card developers-section">
+            <h2><i class="fas fa-users"></i> Meet the Developers</h2>
+            <div class="developers-grid">
+                <!-- Developer 1 -->
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <!-- Replace src with your image link -->
+                        <img src="dev1.jfif" alt="Developer 1">
+                    </div>
+                    <h4>Ronnie B. Sison Jr.</h4>
+               
+                </div>
+
+                <!-- Developer 2 -->
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <!-- Replace src with your image link -->
+                        <img src="link_here_2" alt="Developer 2">
+                    </div>
+                    <h4>Andrew B. Sosito</h4>
+               
+                </div>
+
+                <!-- Developer 3 -->
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <!-- Replace src with your image link -->
+                        <img src="dev3.jfif" alt="Developer 3">
+                    </div>
+                    <h4>Prince Einstein Razon</h4>
+                   
+                </div>
+
+                <!-- Developer 4 -->
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <!-- Replace src with your image link -->
+                        <img src="link_here_4" alt="Developer 4">
+                    </div>
+                    <h4>Clint Manalili</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
