@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +29,6 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        
 
         nav ul {
             list-style: none;
@@ -70,62 +68,87 @@
             color: #0056b3;
         }
 
-        /* Table Styles */
-        .table-container {
-            overflow-x: auto;
-            /* Enables horizontal scrolling for tables on small screens */
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
             margin: 2rem auto;
-            /* Center the table container and add vertical spacing */
-            max-width: 960px;
-            /* Limit the maximum width of the table */
+            padding: 0 1rem;
+        }
+
+        .table-container {
+            flex: 2;
+            min-width: 300px;
+            margin-right: 2rem;
             background-color: #fff;
-            /* White background for the table container */
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
         }
 
         table {
             width: 100%;
-            /* Table takes full width of its container */
             border-collapse: collapse;
-            /* Removes space between borders */
-            margin: 0;
-            /* Remove default margin */
             font-size: 0.95rem;
         }
 
         th,
         td {
             padding: 0.8rem 1rem;
-            /* Padding for table cells */
             text-align: left;
-            /* Align text to the left */
             border-bottom: 1px solid #ddd;
-            /* Light grey bottom border for rows */
         }
 
         th {
             background-color: #e0e7ef;
-            /* Light blue background for headers */
             color: #333;
             font-weight: bold;
             text-transform: uppercase;
-            /* Uppercase header text */
             letter-spacing: 0.5px;
         }
 
         tr:nth-child(even) {
             background-color: #f9f9f9;
-            /* Zebra striping for even rows */
         }
 
         tr:hover {
             background-color: #f0f0f0;
-            /* Highlight row on hover */
         }
 
-        /* Responsive adjustments */
+        .image-gallery {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+    
+        video {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+      
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -141,25 +164,36 @@
                 margin: 0.5rem 0;
             }
 
-            .table-container {
-                margin: 1rem auto;
-                padding: 1rem;
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+    
             }
 
-            th,
-            td {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.9rem;
+            .table-container {
+                margin-right: 0;
+                width: 100%;
+                flex: none;
+            }
+
+            .image-gallery {
+                align-items: center;
+                width: 100%;
+                flex: none;
+             
+            }
+
+            .image-gallery img,
+            video {
+                max-width: 100%;
+            
             }
         }
-        
     </style>
 </head>
 
 <body>
     <header>
-        <!-- You can add a logo here if you have one -->
-        <!-- <div class="logo">Your Logo</div> -->
         <nav>
             <ul>
                 <li><a href="..//home.html"><i class="fas fa-home"></i>Home</a></li>
@@ -167,65 +201,117 @@
         </nav>
     </header>
 
-   
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Name Of Events</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                </tr>
-            </thead>
-            <tbody> 
-                <tr>
-                    <td>Intramurals Day 1</td>
-                    <td>November 26 </td>
-                    <td>7:00 AM - 5:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Intramurals Day 2</td>
-                    <td>November 27 </td>
-                    <td>9:00 AM - 5:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Intramurals Day 3</td>
-                    <td>November 28 </td>
-                    <td>9:00 AM - 5:00 PM</td>
-                </tr>
-                <tr>
-                    <td>University Days</td>
-                    <td>August 12</td>
-                    <td>10:00 AM - 6:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Womens Month Celebration</td>
-                    <td>March 19 </td>
-                    <td>All Day</td>
-                </tr>
-                <tr>
-                    <td>CEA Days</td>
-                    <td>April 22-24, 2024</td>
-                    <td>9:30 AM - 4:30 PM</td>
-                </tr>
-                <tr>
-                    <td>CHALKVENTURE</td>
-                    <td>February 2 </td>
-                    <td>9:00 AM - 5:00 PM</td>
-                <tr>
-                    <td>Valentines Day </td>
-                    <td>February 14 </td> 
-                    <td>9:00 AM - 5:00 PM</td> 
-                </tr>
-                 <tr>
-                    <td> 163rd Founding Anniversary  </td>
-                    <td>November 4 </td> 
-                    <td>9:00 AM - 5:00 PM</td> 
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="content-wrapper">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name Of Events</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr>
+                        <td>Campus Tour</td>
+                        <td>August 7</td>
+                        <td>8:00 am - 12:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>World Teachers Day</td>
+                        <td>October 5</td>
+                        <td>8:00 am - 4:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Worlds Mental Health Day</td>
+                        <td>October 9</td>
+                        <td>8:00 am - 12:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Battle of the Bands</td>
+                        <td>October 17</td>
+                        <td>1:00 pm - 4:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>163rd Founding Anniversary</td>
+                        <td>November 4</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Intramurals Day 1</td>
+                        <td>November 26</td>
+                        <td>7:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Intramurals Day 2</td>
+                        <td>November 27</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Intramurals Day 3</td>
+                        <td>November 28</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Walk for Juana</td>
+                        <td>March 5</td>
+                        <td>8:00 am </td>
+                    </tr>
+                    <tr>
+                        <td>Orange Exhibit GAD</td>
+                        <td>March 1</td>
+                        <td>9:00 am - 12:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Womens Month Celebration</td>
+                        <td>March 19</td>
+                        <td>All Day</td>
+                    </tr>
+                    <tr>
+                        <td>CHALKVENTURE</td>
+                        <td>February 2</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Valentines Day</td>
+                        <td>February 14</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>CEA Days</td>
+                        <td>April 22-24, 2024</td>
+                        <td>9:30 AM - 4:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>MR.MS. and MX.</td>
+                        <td>April 26</td>
+                        <td>1:00 pm - 7:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>CEA Days</td>
+                        <td>May 7</td>
+                        <td>8:00 am - 4:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>University Days</td>
+                        <td>April 14</td>
+                        <td>10:00 AM - 6:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+        <div class="image-gallery">
+            <video width="640" height="360" autoplay playsinline controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="events.jpg" alt="Womens Month">
+            <img src="events2.jpg" alt="Bands">
+            <img src="events3.jpg" alt="PPOP">
+        </div>
+    </div>
 
 </body>
 
